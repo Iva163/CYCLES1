@@ -8,7 +8,7 @@ public class SQRServiceTest {
     void shouldCalcInsideRange() {
         SQRService service = new SQRService();
         int excpected = 3;
-        int actual = service.calcSqrtInRange(200, 300);
+        int actual = service.calcAmtSqrtInRange(200, 300);
         Assertions.assertEquals(excpected, actual);
     }
 
@@ -16,7 +16,7 @@ public class SQRServiceTest {
     void shouldCalcExtremeRange() {
         SQRService service = new SQRService();
         int excpected = 90;
-        int actual = service.calcSqrtInRange(100, 9801);
+        int actual = service.calcAmtSqrtInRange(100, 9801);
         Assertions.assertEquals(excpected, actual);
     }
 
@@ -24,7 +24,7 @@ public class SQRServiceTest {
     void shouldCalcOutRange() {
         SQRService service = new SQRService();
         int excpected = 90;
-        int actual = service.calcSqrtInRange(0, 10_000);
+        int actual = service.calcAmtSqrtInRange(0, 10_000);
         Assertions.assertEquals(excpected, actual);
     }
 
@@ -32,7 +32,7 @@ public class SQRServiceTest {
     void shouldCalcOutStartRange() {
         SQRService service = new SQRService();
         int excpected = 0;
-        int actual = service.calcSqrtInRange(0, 99);
+        int actual = service.calcAmtSqrtInRange(0, 99);
         Assertions.assertEquals(excpected, actual);
     }
 
@@ -40,7 +40,7 @@ public class SQRServiceTest {
     void shouldCalcOutEndRange() {
         SQRService service = new SQRService();
         int excpected = 0;
-        int actual = service.calcSqrtInRange(9802, 10_000);
+        int actual = service.calcAmtSqrtInRange(9802, 10_000);
         Assertions.assertEquals(excpected, actual);
     }
 
